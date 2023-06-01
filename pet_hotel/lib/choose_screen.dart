@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pet_hotel/pet_categories.dart';
+import 'package:pet_hotel/splash_screen.dart';
 
 class ChooseScreen extends StatelessWidget {
   const ChooseScreen({Key? key}) : super(key: key);
@@ -15,7 +17,7 @@ class ChooseScreen extends StatelessWidget {
             Center(
               child: Text("your pet"),
             ),
-            Image.asset("assets/cat.jpg", height: 300),
+            PetCategories(),
           ],
         ),
       ),

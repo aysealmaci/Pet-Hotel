@@ -8,6 +8,7 @@ class PetCategories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size appSize = MediaQuery.of(context).size;
     return Column(
       children: [
         SizedBox(

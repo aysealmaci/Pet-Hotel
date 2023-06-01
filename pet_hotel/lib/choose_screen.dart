@@ -7,18 +7,27 @@ class ChooseScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size appSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
-        child: Column(
-          children: [
-            Center(
-              child: Text("Please choose"),
-            ),
-            Center(
-              child: Text("your pet"),
-            ),
-            PetCategories(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Center(
+                child: Text("Please choose"),
+              ),
+              Center(
+                child: Text("your pet"),
+              ),
+              PetCategories(),
+              PetCategories(),
+              PetCategories(),
+              PetCategories(),
+              PetCategories(),
+              PetCategories(),
+              PetCategories(),
+            ],
+          ),
         ),
       ),
     );

@@ -7,7 +7,17 @@ class ChooseScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Text("abc"),
+        child: Column(
+          children: [
+            Center(
+              child: Text("Please choose"),
+            ),
+            Center(
+              child: Text("your pet"),
+            ),
+            Image.asset("assets/cat.jpg", height: 300),
+          ],
+        ),
       ),
     );
   }

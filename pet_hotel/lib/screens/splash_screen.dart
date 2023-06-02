@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_hotel/screens/choose_screen.dart';
 import 'package:pet_hotel/main.dart';
+import 'package:pet_hotel/screens/my_reservation_screen.dart';
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class _SplashState extends State<Splash> {
     super.initState();
     Future.delayed(Duration(seconds: 4), () {
       Navigator.push(
-          context, MaterialPageRoute(builder: ((context) => ChooseScreen())));
+          context, MaterialPageRoute(builder: ((context) => MyReservations())));
     });
   }
 

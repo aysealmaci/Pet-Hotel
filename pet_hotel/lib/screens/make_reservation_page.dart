@@ -30,6 +30,7 @@ class _BookPageState extends State<BookPage> {
   Widget build(BuildContext context) {
     Size appSize = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: SingleChildScrollView(
         child: Column(
           children: [

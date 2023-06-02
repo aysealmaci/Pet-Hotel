@@ -156,8 +156,10 @@ class _BookPageState extends State<BookPage> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),
                           onPressed: () {
-                            MaterialPageRoute(
-                                builder: ((context) => ProfileScreen()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: ((context) => ProfileScreen())));
                           },
                           child: Text(
                             "Set date",

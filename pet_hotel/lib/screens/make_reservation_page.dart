@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pet_hotel/profile_screen.dart';
+import 'package:pet_hotel/screens/choose_screen.dart';
+import 'package:pet_hotel/screens/profile_screen.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:intl/intl.dart';
-
-import 'choose_screen.dart';
 
 class BookPage extends StatefulWidget {
   const BookPage({Key? key}) : super(key: key);

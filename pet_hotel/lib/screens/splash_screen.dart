@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pet_hotel/choose_screen.dart';
+import 'package:pet_hotel/screens/choose_screen.dart';
 import 'package:pet_hotel/main.dart';
 
 class Splash extends StatefulWidget {

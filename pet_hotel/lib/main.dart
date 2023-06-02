@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_hotel/book_screen.dart';
+import 'package:pet_hotel/profile_screen.dart';
 import 'package:pet_hotel/splash_screen.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Splash(),
+      home: const BookPage(),
     );
   }
 }

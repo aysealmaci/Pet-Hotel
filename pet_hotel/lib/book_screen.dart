@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_hotel/profile_screen.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:intl/intl.dart';
 
@@ -51,74 +52,75 @@ class _BookPageState extends State<BookPage> {
               ),
             ),
             SizedBox(
-              height: 50,
+              height: 30,
             ),
-            Row(
-              children: [
-                Column(
-                  children: [
-                    Container(
-                      height: 100,
-                      width: 230,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Color.fromARGB(255, 186, 186, 186),
-                          width: 1.0,
-                        ),
-                      ),
-                      child: Container(
-                        width: appSize.width / 2,
-                        child: Column(
-                          children: [
-                            Text(
-                              "Arrival",
-                              style: TextStyle(color: Colors.black),
-                            ),
-                            if (firstDate != null)
-                              Text(_dateFormat.format(firstDate!)),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  width: 40,
-                ),
-                Container(
-                  width: 230,
-                  child: Column(
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                children: [
+                  Column(
                     children: [
                       Container(
                         height: 100,
-                        width: appSize.width / 2,
+                        width: appSize.width / 23 * 10,
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Colors.grey,
+                            color: Color.fromARGB(255, 186, 186, 186),
                             width: 1.0,
                           ),
                         ),
-                        child: Column(
-                          children: [
-                            Text(
-                              "Departure",
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 0, 0, 0)),
-                            ),
-                            if (secondDate != null)
-                              Text(_dateFormat.format(secondDate!)),
-                          ],
+                        child: Container(
+                          width: appSize.width / 23 * 10,
+                          child: Column(
+                            children: [
+                              Text(
+                                "Arrival",
+                                style: TextStyle(color: Colors.black),
+                              ),
+                              if (firstDate != null)
+                                Text(_dateFormat.format(firstDate!)),
+                            ],
+                          ),
                         ),
                       ),
                     ],
                   ),
-                ),
-              ],
+                  Container(
+                    width: appSize.width / 23 * 10,
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 100,
+                          width: appSize.width / 23 * 10,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Colors.grey,
+                              width: 1.0,
+                            ),
+                          ),
+                          child: Column(
+                            children: [
+                              Text(
+                                "Departure",
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 0, 0, 0)),
+                              ),
+                              if (secondDate != null)
+                                Text(_dateFormat.format(secondDate!)),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
             SizedBox(
-              height: 50,
+              height: 30,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -153,7 +155,10 @@ class _BookPageState extends State<BookPage> {
                               primary: Color.fromARGB(255, 59, 143, 90),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),
-                          onPressed: () {},
+                          onPressed: () {
+                            MaterialPageRoute(
+                                builder: ((context) => ProfileScreen()));
+                          },
                           child: Text(
                             "Set date",
                             style: TextStyle(

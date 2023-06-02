@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:intl/intl.dart';
 
+import 'choose_screen.dart';
+
 class BookPage extends StatefulWidget {
   const BookPage({Key? key}) : super(key: key);
 
@@ -49,7 +51,7 @@ class _BookPageState extends State<BookPage> {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 50,
             ),
             Row(
               children: [
@@ -57,7 +59,7 @@ class _BookPageState extends State<BookPage> {
                   children: [
                     Container(
                       height: 100,
-                      width: 200,
+                      width: 230,
                       decoration: BoxDecoration(
                         border: Border.all(
                           color: Color.fromARGB(255, 186, 186, 186),
@@ -81,15 +83,15 @@ class _BookPageState extends State<BookPage> {
                   ],
                 ),
                 SizedBox(
-                  width: 25,
+                  width: 40,
                 ),
                 Container(
-                  width: appSize.width / 2,
+                  width: 230,
                   child: Column(
                     children: [
                       Container(
                         height: 100,
-                        width: 200,
+                        width: appSize.width / 2,
                         decoration: BoxDecoration(
                           border: Border.all(
                             color: Colors.grey,
@@ -114,7 +116,7 @@ class _BookPageState extends State<BookPage> {
               ],
             ),
             SizedBox(
-              height: 20,
+              height: 50,
             ),
             Row(
               children: [
@@ -128,7 +130,12 @@ class _BookPageState extends State<BookPage> {
                               primary: Color.fromARGB(255, 185, 171, 165),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: ((context) => ChooseScreen())));
+                          },
                           child: Text(
                             "close",
                             style: TextStyle(

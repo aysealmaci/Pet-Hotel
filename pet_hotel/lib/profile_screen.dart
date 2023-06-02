@@ -40,12 +40,11 @@ class ProfileScreen extends StatelessWidget {
               children: [
                 Text(
                   "Notifications and support",
-                  style: TextStyle(fontWeight: FontWeight.w900, fontSize: 22),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
                 ),
               ],
             ),
           ),
-          SizedBox(height: 30),
           ProfileContext(
             name: "Inbox",
             icon_name: Icon(Icons.inbox),
@@ -69,12 +68,11 @@ class ProfileScreen extends StatelessWidget {
               children: [
                 Text(
                   "Account",
-                  style: TextStyle(fontWeight: FontWeight.w900, fontSize: 22),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
                 ),
               ],
             ),
           ),
-          SizedBox(height: 10),
           ProfileContext(
             name: "Personal Details",
             icon_name: Icon(Icons.person),

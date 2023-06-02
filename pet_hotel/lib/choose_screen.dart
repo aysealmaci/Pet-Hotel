@@ -9,23 +9,35 @@ class ChooseScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size appSize = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: Container(
         child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Column(
             children: [
               Center(
-                child: Text("Please choose"),
+                child: Text(
+                  "Please choose",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 35,
+                      fontStyle: FontStyle.italic),
+                ),
               ),
               Center(
-                child: Text("your pet"),
+                child: Text(
+                  "your pet",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 35,
+                      fontStyle: FontStyle.italic),
+                ),
               ),
-              PetCategories(),
-              PetCategories(),
-              PetCategories(),
-              PetCategories(),
-              PetCategories(),
-              PetCategories(),
-              PetCategories(),
+              PetCategories(pet_picture: "assets/cat.jpeg"),
+              PetCategories(pet_picture: "assets/dog.jpeg"),
+              PetCategories(pet_picture: "assets/bird.jpeg"),
+              PetCategories(pet_picture: "assets/fish.jpeg"),
+              PetCategories(pet_picture: "assets/hamster.jpeg"),
             ],
           ),
         ),

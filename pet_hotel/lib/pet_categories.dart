@@ -4,8 +4,10 @@ import 'package:pet_hotel/book_screen.dart';
 class PetCategories extends StatelessWidget {
   const PetCategories({
     Key? key,
+    this.pet_picture,
   }) : super(key: key);
 
+  final String? pet_picture;
   @override
   Widget build(BuildContext context) {
     Size appSize = MediaQuery.of(context).size;
@@ -14,18 +16,24 @@ class PetCategories extends StatelessWidget {
         SizedBox(
           height: 20,
         ),
-        InkWell(
-          onTap: (() {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => BookPage()));
-          }),
-          child: Image.asset("assets/cat.jpg", height: 100),
+        Container(
+          child: InkWell(
+            onTap: (() {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => BookPage()));
+            }),
+            child: Image.asset(
+              pet_picture!,
+              height: 140,
+              width: 200,
+            ),
+          ),
         ),
         SizedBox(
           height: 20,
         ),
         Container(
-          width: 200,
+          width: appSize.width,
           height: 2,
           color: Colors.black,
         ),

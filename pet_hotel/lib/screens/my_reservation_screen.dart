@@ -9,6 +9,27 @@ class MyReservations extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.search, color: Colors.grey.shade900),
+          label: 'Make Res.',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.money, color: Colors.grey.shade900),
+          label: 'Deals',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.airplane_ticket, color: Colors.grey.shade900),
+          label: 'My Res.',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.person,
+            color: Colors.grey.shade900,
+          ),
+          label: 'Profile',
+        ),
+      ]),
       body: SingleChildScrollView(
         child: Column(
           children: [
